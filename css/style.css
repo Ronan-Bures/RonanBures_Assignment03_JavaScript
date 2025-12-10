@@ -1,0 +1,210 @@
+/*---------- Style Constants ----------*/
+/* Default (Light Mode) */
+body {
+    margin: 0;
+    padding: 0;
+    background: #fdfbd4;
+    color: black;
+    font-family: "Unkempt", cursive;
+    font-weight: 400;
+    font-style: normal;
+    overflow-x: hidden;
+
+    /* New for centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* horizontal centering */
+    justify-content: center;    /* vertical centering */
+    min-height: 100vh;          /* take full viewport height */
+    box-sizing: border-box;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background: #121212;
+    color: #fdfbd4;
+}
+
+#header {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+    letter-spacing: 3px;
+    text-align: center;
+    font-size: 32px;
+    opacity: 0.7;
+    box-sizing: border-box;
+}
+
+#darkModeToggle {
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    cursor: pointer; 
+    font-size: 50px; 
+    margin: 10px;
+    font-weight: 400;           /* normal weight */
+    transition: font-weight 0.2s, transform 0.2s;
+}
+
+#darkModeToggle:hover {
+    font-weight: 700;           /* bolder on hover */
+    transform: scale(1.2);      /* slightly enlarge */
+}
+/* Refresh Button*/
+#refreshButton {
+    position: absolute; 
+    top: 10px; 
+    right: 60px; 
+    cursor: pointer; 
+    font-size: 50px; 
+    margin: 10px;
+    font-weight: 400;           /* normal weight */
+    transition: font-weight 0.2s, transform 0.2s;
+}
+
+#refreshButton:hover {
+    font-weight: 700;           /* bolder on hover */
+    transform: scale(1.2);      /* slightly enlarge */
+}
+
+a {
+    color: rgb(0, 126, 168);
+}
+
+a:hover {
+    font-weight: 700;           /* bolder on hover */
+    transform: scale(1.2);      /* slightly enlarge */
+}
+
+
+.unkempt-regular {
+    font-family: "Unkempt", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.unkempt-bold {
+    font-family: "Unkempt", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 64px;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+#grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 100vw;                          
+    max-width: 100%;                        
+    padding: 0 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+/*Icons are FONTS*/
+#grid-item1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+#pitchSlider {
+    width: 80%;
+}
+
+/* Remove default appearance */
+input[type="range"] {
+    appearance: none;
+    width: 80%;
+    height: 8px;
+    background: transparent;
+}
+
+/* Track (the bar) */
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #eaff00d3; /* change track color */
+    border-radius: 4px; 
+}
+
+/* Thumb (the circle) */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #2b00ff;   /* change thumb color */
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* align vertically */
+}
+
+
+#grid-item2 {
+    font-size: 30px;
+    text-align: center;
+}
+
+#playpauseButton {
+    cursor: pointer;
+    font-size: 100px;
+    color: red;
+}
+
+.icon-button {
+    font-weight: 300;
+    transition: font-weight 0.2s, transform 0.2s, color 0.2s;
+}
+
+.icon-button:hover {
+    font-weight: 700;
+}
+#grid-item3 {
+    text-align: center;
+}
+
+#crankContainer {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    position: relative;
+}
+
+#crank {
+    width: 100px;
+    height: 10px;   
+    background: #3c9925;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform-origin: left center;
+    transform: rotate(0deg);
+    cursor: grab;
+}
+
+#crank:active {
+    cursor: grabbing;
+}
+
+#CrankText {
+    font-size: 30px;
+}
+
+
+
+footer {
+    width: 100%;
+    padding-left: 50px;
+}

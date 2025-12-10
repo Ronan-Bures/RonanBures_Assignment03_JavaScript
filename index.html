@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Fidget Board</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode,radio_button_checked,radio_button_unchecked,replay" />
+</head>
+<body>
+   <div id="header">
+        <h1>Interactive Fidget Board</h1>
+        <p>Play with a <strong>SLIDER</strong>, click <strong>BUTTONS</strong>, and crank with a <strong>CRANK!</strong></p>
+        <!-- Dark Mode Toggle Icon -->
+        <span id="darkModeToggle" class="material-symbols-outlined">
+            dark_mode
+        </span>
+        <span id="refreshButton" class="material-symbols-outlined">
+            replay
+        </span>
+    </div>
+    
+    <div id="grid">
+        <div id="grid-item1">
+            <label for="pitchSlider">Pitch</label><br>
+            <input type="range" id="pitchSlider" min="0.5" max="2" step="0.01" value="1">
+            <p>Pitch: <span id="pitchValue">1.00</span>x</p>
+        </div>
+
+        <div id="grid-item2">
+            <span id="playpauseButton" class="icon-button material-symbols-outlined">
+                radio_button_unchecked
+            </span>
+            <p id="PlayPauseText"></p>
+            <audio id="mySound" src="assets/cat-meows-in-the-room.wav"></audio>
+        </div>
+
+        <div id="grid-item3">
+            <div id="crankContainer">
+                <div id="crank"></div>
+            </div>
+            <p id="CrankText">CRANK!</p>
+        </div> 
+    </div>
+    
+    <footer>
+       References:<br>
+       All sounds taken from <a href="https://freesound.org/">FreeSound.org</a><br>
+       <a href="https://www.w3schools.com/howto/howto_js_rangeslider.asp">How TO - Range Sliders</a><br>
+       <a href="https://www.w3schools.com/jsref/default.asp">JavaScript and HTML DOM References</a><br>
+       <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math in JavaScript</a><br>
+       <a href="https://fonts.google.com/icons">Google Icons</a>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
